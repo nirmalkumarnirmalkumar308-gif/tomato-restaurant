@@ -1,0 +1,507 @@
+/* =========================
+   EDIT FOOD PAGE
+========================= */
+
+.edit-food-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 35px 45px 60px;
+  background: #f7f8fa;
+  box-sizing: border-box;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.edit-food-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.edit-food-title-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.edit-food-back {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 18px;
+  transition: 0.2s ease;
+}
+
+.edit-food-back:hover {
+  color: #ff6347;
+  transform: translateX(-3px);
+}
+
+.edit-food-back svg {
+  font-size: 18px;
+}
+
+.edit-food-header h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 750;
+  color: #222;
+  letter-spacing: -0.5px;
+}
+
+.edit-food-header p {
+  margin: 8px 0 0;
+  color: #777;
+  font-size: 15px;
+}
+
+/* =========================
+   REFRESH BUTTON
+========================= */
+
+.edit-food-refresh {
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  color: #333;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-food-refresh:hover {
+  border-color: #ff6347;
+  color: #ff6347;
+  transform: translateY(-1px);
+}
+
+.edit-food-refresh:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.edit-food-refresh svg {
+  font-size: 18px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.edit-food-search-box {
+  width: 100%;
+  max-width: 650px;
+  height: 52px;
+  background: #fff;
+  border: 1px solid #e4e5e7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 17px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+  transition: 0.2s ease;
+}
+
+.edit-food-search-box:focus-within {
+  border-color: #ff6347;
+  box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.08);
+}
+
+.edit-food-search-box svg {
+  color: #999;
+  font-size: 21px;
+  flex-shrink: 0;
+}
+
+.edit-food-search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #333;
+  background: transparent;
+}
+
+.edit-food-search-box input::placeholder {
+  color: #aaa;
+}
+
+/* =========================
+   CATEGORY
+========================= */
+
+.edit-food-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.edit-food-category {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e9eaec;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* =========================
+   CATEGORY HEADER
+========================= */
+
+.category-heading {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  background: #fff;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.category-icon {
+  width: 43px;
+  height: 43px;
+  border-radius: 11px;
+  background: #fff2ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.category-title h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #222;
+  font-weight: 700;
+}
+
+.category-title span {
+  display: block;
+  margin-top: 3px;
+  color: #999;
+  font-size: 12px;
+}
+
+/* =========================
+   FOOD LIST
+========================= */
+
+.edit-food-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   FOOD ITEM
+========================= */
+
+.edit-food-item {
+  min-height: 105px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  transition: background 0.2s ease;
+}
+
+.edit-food-item:last-child {
+  border-bottom: none;
+}
+
+.edit-food-item:hover {
+  background: #fffaf8;
+}
+
+/* =========================
+   FOOD IMAGE
+========================= */
+
+.edit-food-image {
+  width: 76px;
+  height: 76px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f2f2f2;
+  flex-shrink: 0;
+}
+
+.edit-food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.no-food-image {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+/* =========================
+   FOOD INFO
+========================= */
+
+.edit-food-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.edit-food-info h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #222;
+  text-transform: capitalize;
+}
+
+.edit-food-subcategory {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #999;
+}
+
+.edit-food-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.edit-food-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ff6347;
+  white-space: nowrap;
+}
+
+.edit-food-description {
+  color: #888;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 450px;
+}
+
+/* =========================
+   EDIT BUTTON
+========================= */
+
+.edit-food-button {
+  height: 40px;
+  min-width: 88px;
+  padding: 0 15px;
+  border: 1px solid #ff6347;
+  border-radius: 9px;
+  background: #fff;
+  color: #ff6347;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.edit-food-button svg {
+  font-size: 17px;
+}
+
+.edit-food-button:hover {
+  background: #ff6347;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(255, 99, 71, 0.2);
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.edit-food-loading {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+}
+
+.edit-food-spinner {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #eeeeee;
+  border-top-color: #ff6347;
+  border-radius: 50%;
+  animation: editFoodSpin 0.8s linear infinite;
+  margin-bottom: 15px;
+}
+
+.edit-food-loading p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@keyframes editFoodSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.edit-food-empty {
+  min-height: 350px;
+  background: #fff;
+  border: 1px solid #e9eaec;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.empty-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #fff2ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.edit-food-empty h2 {
+  margin: 0 0 8px;
+  color: #333;
+  font-size: 21px;
+}
+
+.edit-food-empty p {
+  margin: 0;
+  color: #999;
+  font-size: 14px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .edit-food-page {
+    padding: 30px 25px 50px;
+  }
+
+  .edit-food-description {
+    max-width: 250px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .edit-food-page {
+    padding: 25px 15px 40px;
+  }
+
+  .edit-food-header {
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  .edit-food-header h1 {
+    font-size: 28px;
+  }
+
+  .edit-food-refresh {
+    width: 100%;
+  }
+
+  .edit-food-search-box {
+    max-width: none;
+  }
+
+  .category-heading {
+    padding: 17px;
+  }
+
+  .edit-food-item {
+    padding: 15px 17px;
+    gap: 12px;
+  }
+
+  .edit-food-image {
+    width: 62px;
+    height: 62px;
+  }
+
+  .edit-food-info h3 {
+    font-size: 15px;
+  }
+
+  .edit-food-meta {
+    display: block;
+  }
+
+  .edit-food-price {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .edit-food-description {
+    display: block;
+    max-width: 160px;
+  }
+
+  .edit-food-button {
+    min-width: 42px;
+    width: 42px;
+    padding: 0;
+  }
+
+  .edit-food-button span {
+    display: none;
+  }
+}

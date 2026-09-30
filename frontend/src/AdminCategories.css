@@ -1,0 +1,423 @@
+.admin-categories-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px;
+  background: #f7f8fa;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.categories-title h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.categories-title p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.refresh-btn,
+.add-category-btn {
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.refresh-btn {
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.refresh-btn:hover {
+  background: #f3f4f6;
+}
+
+.add-category-btn {
+  background: #111827;
+  border: 1px solid #111827;
+  color: white;
+}
+
+.add-category-btn:hover {
+  background: #000;
+}
+
+/* ===============================
+   STAT
+================================ */
+
+.category-stat-card {
+  width: 220px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.stat-number {
+  color: #111827;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.stat-label {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* ===============================
+   FORM
+================================ */
+
+.category-form-card {
+  padding: 22px;
+  margin-bottom: 20px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.form-title h2 {
+  margin: 0 0 20px;
+  color: #111827;
+  font-size: 19px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  max-width: 500px;
+  height: 42px;
+  padding: 0 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #111827;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.cancel-btn,
+.save-btn {
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.save-btn {
+  background: #111827;
+  border: 1px solid #111827;
+  color: white;
+}
+
+.save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===============================
+   TABLE CARD
+================================ */
+
+.category-table-card {
+  width: 100%;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-header {
+  min-height: 75px;
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  box-sizing: border-box;
+}
+
+.table-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 19px;
+}
+
+.table-header p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.items-count {
+  padding: 7px 12px;
+  background: #f3f4f6;
+  border-radius: 20px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ===============================
+   TABLE
+================================ */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.category-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+}
+
+.category-table thead {
+  background: #f9fafb;
+}
+
+.category-table th {
+  height: 52px;
+  padding: 0 20px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.category-table tbody tr {
+  height: 64px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.category-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.category-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.category-table td {
+  padding: 0 20px;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* ===============================
+   SORT NUMBER
+================================ */
+
+.sort-number {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border-radius: 7px;
+  color: #111827;
+  font-weight: 700;
+}
+
+/* ===============================
+   CATEGORY ID
+================================ */
+
+.category-id {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* ===============================
+   CATEGORY NAME
+================================ */
+
+.category-name {
+  color: #111827;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ===============================
+   ACTIONS
+================================ */
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.order-btn {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.order-btn:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+.order-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.edit-btn,
+.delete-btn {
+  height: 34px;
+  padding: 0 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.edit-btn:hover {
+  background: #f3f4f6;
+}
+
+.delete-btn {
+  background: white;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #fef2f2;
+}
+
+/* ===============================
+   LOADING
+================================ */
+
+.loading-box,
+.empty-box {
+  padding: 60px 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .admin-categories-page {
+    padding: 16px;
+  }
+
+  .categories-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .categories-title h1 {
+    font-size: 23px;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .refresh-btn,
+  .add-category-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .category-stat-card {
+    width: 100%;
+  }
+
+  .table-header {
+    padding: 16px;
+  }
+
+  .category-table th,
+  .category-table td {
+    padding: 0 14px;
+  }
+}

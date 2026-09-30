@@ -1,0 +1,164 @@
+.offers {
+    width: 100%;
+    padding: 80px 5%;
+    box-sizing: border-box;
+    background: #fffaf8;
+}
+
+.offers-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.offers-title span {
+    color: tomato;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.offers-title h2 {
+    margin: 8px 0 10px;
+    font-size: 34px;
+    color: #222;
+}
+
+.offers-title p {
+    max-width: 600px;
+    margin: auto;
+    color: #707070;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.offers-list {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.offer-card {
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background: white;
+
+    border: 1px solid #f1e8e5;
+
+    display: flex;
+
+    gap: 18px;
+
+    transition: 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.offer-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #fff0ec;
+
+    font-size: 25px;
+}
+
+.offer-content {
+    flex: 1;
+}
+
+.offer-content h3 {
+    margin: 0 0 7px;
+
+    color: #222;
+
+    font-size: 20px;
+}
+
+.offer-content p {
+    margin: 0 0 18px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.offer-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.offer-bottom span {
+    color: #777;
+
+    font-size: 11px;
+}
+
+.offer-bottom strong {
+    color: tomato;
+}
+
+.offer-bottom button {
+    border: none;
+
+    border-radius: 18px;
+
+    padding: 7px 12px;
+
+    background: tomato;
+
+    color: white;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.offer-bottom button:hover {
+    background: #e94b2f;
+}
+
+@media (max-width: 950px) {
+    .offers-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .offers {
+        padding: 60px 5%;
+    }
+
+    .offers-title h2 {
+        font-size: 28px;
+    }
+
+    .offers-list {
+        grid-template-columns: 1fr;
+    }
+}

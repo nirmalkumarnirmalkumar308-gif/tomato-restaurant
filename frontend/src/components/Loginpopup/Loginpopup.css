@@ -1,0 +1,400 @@
+
+/* ================================
+   LOGIN POPUP OVERLAY
+================================ */
+
+.login-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+
+  animation: popupFade 0.25s ease;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.login-popup-container {
+  width: min(420px, 92%);
+  padding: 32px;
+
+  background: #ffffff;
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.18);
+
+  animation: popupSlide 0.3s ease;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.login-popup-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 26px;
+}
+
+.login-popup-title h2 {
+  margin: 0;
+
+  color: #222222;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.login-popup-title img {
+  width: 18px;
+  height: 18px;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.login-popup-title img:hover {
+  transform: rotate(90deg);
+}
+
+
+/* ================================
+   INPUT AREA
+================================ */
+
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/* ================================
+   NORMAL INPUT
+================================ */
+
+.login-popup-inputs > input {
+  width: 100%;
+  height: 50px;
+
+  box-sizing: border-box;
+
+  padding: 0 16px;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #fafafa;
+
+  color: #222;
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-popup-inputs > input::placeholder {
+  color: #999;
+}
+
+.login-popup-inputs > input:focus {
+  border-color: tomato;
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.1);
+}
+
+
+/* ================================
+   PASSWORD FIELD
+================================ */
+
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field input {
+  width: 100%;
+  height: 50px;
+
+  box-sizing: border-box;
+
+  padding: 0 48px 0 16px;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #fafafa;
+
+  color: #222;
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.password-field input::placeholder {
+  color: #999;
+}
+
+.password-field input:focus {
+  border-color: tomato;
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.1);
+}
+
+
+/* ================================
+   EYE ICON
+================================ */
+
+.eye-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #777;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.eye-icon:hover {
+  color: tomato;
+}
+
+
+/* ================================
+   ERROR MESSAGE
+================================ */
+
+.login-error {
+  margin: 14px 0 0;
+
+  color: #e53935;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* ================================
+   SUCCESS MESSAGE
+================================ */
+
+.login-success {
+  margin: 14px 0 0;
+
+  color: #2e9b57;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* ================================
+   LOGIN BUTTON
+================================ */
+
+.login-popup-container > button {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 22px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: tomato;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.login-popup-container > button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(255, 99, 71, 0.25);
+}
+
+.login-popup-container > button:active {
+  transform: translateY(0);
+}
+
+.login-popup-container > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* ================================
+   TERMS & CONDITIONS
+================================ */
+
+.login-popup-condition {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  margin-top: 18px;
+}
+
+.login-popup-condition input {
+  width: 15px;
+  height: 15px;
+
+  margin-top: 2px;
+
+  accent-color: tomato;
+
+  cursor: pointer;
+}
+
+.login-popup-condition p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* ================================
+   SWITCH LOGIN / SIGN UP
+================================ */
+
+.switch-text {
+  margin: 20px 0 0;
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+.switch-text span {
+  margin-left: 4px;
+
+  color: tomato;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+}
+
+.switch-text span:hover {
+  opacity: 0.75;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popupSlide {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+  .login-popup-container {
+    width: 90%;
+    padding: 25px 20px;
+
+    border-radius: 18px;
+  }
+
+  .login-popup-title h2 {
+    font-size: 23px;
+  }
+
+  .login-popup-inputs {
+    gap: 12px;
+  }
+
+  .login-popup-inputs > input,
+  .password-field input,
+  .login-popup-container > button {
+    height: 48px;
+  }
+
+  .login-popup-condition p {
+    font-size: 10px;
+  }
+
+  .switch-text {
+    font-size: 12px;
+  }
+}
+

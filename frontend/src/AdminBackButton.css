@@ -1,0 +1,40 @@
+.admin-back-dashboard {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #555;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-back-dashboard:hover {
+  background: #fff5f1;
+  color: #ff4c24;
+  border-color: #ff4c24;
+  transform: translateX(-2px);
+}
+
+.admin-back-dashboard svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,528 @@
+/* =========================================================
+   POPULAR FOOD SECTION
+========================================================= */
+
+.popular-food {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 70px 40px 80px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.popular-food-title {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 42px;
+}
+
+.popular-section-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 14px;
+  margin-bottom: 12px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 77, 45, 0.08);
+  color: #ff4d2d;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.popular-food-title h1 {
+  margin: 0;
+
+  color: #171717;
+
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.popular-food-title p {
+  margin: 14px auto 0;
+
+  max-width: 680px;
+
+  color: #777;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   FOOD GRID
+========================================================= */
+
+.popular-food-list {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 28px;
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   IMPORTANT FOOD CARD FIX
+========================================================= */
+
+.popular-food-list > * {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  box-sizing: border-box;
+}
+
+/*
+   FoodItem itself
+*/
+
+.popular-food-list .food-item {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+/*
+   Image container must occupy full card width
+*/
+
+.popular-food-list .food-item-img-container {
+  width: 100% !important;
+
+  height: 300px !important;
+  min-height: 300px !important;
+
+  position: relative;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+
+  border-radius: 20px 20px 0 0;
+}
+
+/*
+   Actual image
+*/
+
+.popular-food-list .food-item-image {
+  position: absolute !important;
+
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: none !important;
+  max-height: none !important;
+
+  display: block !important;
+
+  object-fit: cover !important;
+
+  object-position: center !important;
+
+  transform: scale(1.01);
+
+  transition:
+    transform 0.45s ease;
+}
+
+/* Image hover */
+
+.popular-food-list .food-item:hover
+.food-item-image {
+  transform: scale(1.06);
+}
+
+/* =========================================================
+   IMAGE PLACEHOLDER
+========================================================= */
+
+.popular-food-list .food-image-placeholder {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f5f5;
+
+  color: #999;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.popular-food-list .food-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.02) 45%,
+      rgba(0, 0, 0, 0.35) 100%
+    );
+}
+
+/* =========================================================
+   FOOD INFO
+========================================================= */
+
+.popular-food-list .food-item-info {
+  width: 100% !important;
+
+  box-sizing: border-box;
+
+  padding: 18px 18px 20px;
+
+  flex: 1;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+  .popular-food {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .popular-food-list {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+  }
+
+  .popular-food-list
+  .food-item-img-container {
+    height: 280px !important;
+    min-height: 280px !important;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .popular-food {
+    padding: 55px 22px 65px;
+  }
+
+  .popular-food-title h1 {
+    font-size: 32px;
+  }
+
+  .popular-food-list {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .popular-food-list
+  .food-item-img-container {
+    height: 270px !important;
+    min-height: 270px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .popular-food {
+    padding: 45px 15px 55px;
+  }
+
+  .popular-food-title {
+    margin-bottom: 28px;
+  }
+
+  .popular-food-title h1 {
+    font-size: 27px;
+  }
+
+  .popular-food-title p {
+    font-size: 14px;
+  }
+
+  .popular-food-list {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+  .popular-food-list
+  .food-item-img-container {
+    height: 210px !important;
+    min-height: 210px !important;
+
+    border-radius: 16px 16px 0 0;
+  }
+
+  .popular-food-list
+  .food-item-info {
+    padding: 13px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .popular-food {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .popular-food-list {
+    gap: 10px;
+  }
+
+  .popular-food-list
+  .food-item-img-container {
+    height: 180px !important;
+    min-height: 180px !important;
+  }
+
+  .popular-food-list
+  .food-item-info {
+    padding: 11px;
+  }
+}
+
+/* =========================================================
+   VIEW ALL BUTTON
+========================================================= */
+
+.popular-food-button-container {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 45px;
+}
+
+.popular-food-button {
+  border: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 13px 22px;
+
+  border-radius: 999px;
+
+  background: #171717;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.popular-food-button:hover {
+  background: #ff4d2d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px
+    rgba(255, 77, 45, 0.22);
+}
+
+.view-all-arrow {
+  font-size: 18px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.popular-food-button:hover
+.view-all-arrow {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   NO FOOD FOUND
+========================================================= */
+
+.no-food-found {
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 40px 20px;
+
+  border-radius: 24px;
+
+  background: #fafafa;
+
+  border: 1px solid #eeeeee;
+}
+
+.no-food-icon {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 50%;
+
+  background: #fff3ef;
+
+  font-size: 28px;
+}
+
+.no-food-found h3 {
+  margin: 0 0 8px;
+
+  color: #222;
+
+  font-size: 20px;
+}
+
+.no-food-found p {
+  margin: 0 0 20px;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+.no-food-found button {
+  border: none;
+
+  padding: 11px 18px;
+
+  border-radius: 10px;
+
+  background: #ff4d2d;
+  color: white;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   SKELETON
+========================================================= */
+
+.food-skeleton {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 300px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f1f1f1 25%,
+      #e8e8e8 50%,
+      #f1f1f1 75%
+    );
+
+  background-size: 200% 100%;
+
+  animation:
+    skeletonLoading 1.4s infinite;
+}
+
+.skeleton-content {
+  padding: 18px;
+}
+
+.skeleton-line {
+  height: 12px;
+
+  margin-bottom: 10px;
+
+  border-radius: 6px;
+
+  background: #eeeeee;
+}
+
+.skeleton-line.large {
+  width: 75%;
+}
+
+.skeleton-line.small {
+  width: 40%;
+}
+
+@keyframes skeletonLoading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}

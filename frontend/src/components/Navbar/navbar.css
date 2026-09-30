@@ -1,0 +1,960 @@
+/* =========================================================
+   TOMATO NAVBAR
+========================================================= */
+
+.navbar {
+  width: 100%;
+  height: 82px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NAVBAR CONTAINER
+========================================================= */
+
+.navbar-container {
+  width: 94%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  box-sizing: border-box;
+
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-brand {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.navbar-logo {
+  width: 165px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   DESKTOP MENU
+========================================================= */
+
+.navbar-menu {
+  flex: 1 1 auto;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 34px;
+
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.navbar-menu li {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  padding: 31px 0;
+
+  color: #222222;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* =========================================================
+   MENU UNDERLINE
+========================================================= */
+
+.navbar-menu li::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 18px;
+
+  width: 0;
+  height: 3px;
+
+  background: #ff4d2d;
+
+  border-radius: 10px;
+
+  transform: translateX(-50%);
+
+  transition: width 0.2s ease;
+}
+
+
+/* =========================================================
+   MENU HOVER
+========================================================= */
+
+.navbar-menu li:hover {
+  color: #ff4d2d;
+}
+
+.navbar-menu li:hover::after {
+  width: 20px;
+}
+
+
+/* =========================================================
+   ACTIVE MENU
+========================================================= */
+
+.navbar-menu li.active {
+  color: #ff4d2d;
+  font-weight: 600;
+}
+
+.navbar-menu li.active::after {
+  width: 28px;
+}
+
+
+/* =========================================================
+   RIGHT ACTIONS
+========================================================= */
+
+.navbar-actions {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.navbar-search {
+  position: relative;
+
+  flex: 0 0 44px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 50px;
+
+  box-sizing: border-box;
+
+  transition:
+    width 0.25s ease,
+    flex-basis 0.25s ease;
+}
+
+.navbar-search.search-open {
+  flex: 0 0 190px;
+
+  width: 190px;
+}
+
+.navbar-search input {
+  flex: 1 1 auto;
+
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  padding: 0 5px 0 14px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #222222;
+
+  font-size: 13px;
+}
+
+.navbar-search input::placeholder {
+  color: #999999;
+}
+
+
+/* =========================================================
+   ICON BUTTON
+========================================================= */
+
+.navbar-icon-button {
+  position: relative;
+
+  flex: 0 0 44px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #222222;
+
+  font-size: 18px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar-icon-button:hover {
+  color: #ff4d2d;
+
+  background: #fff3ef;
+
+  transform: translateY(-1px);
+}
+
+.navbar-icon-button svg {
+  display: block;
+
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   WISHLIST / CART BADGE
+========================================================= */
+
+.navbar-badge {
+  position: absolute;
+
+  top: -4px;
+  right: -4px;
+
+  min-width: 18px;
+  height: 18px;
+
+  padding: 0 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ff4d2d;
+
+  color: #ffffff;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 50px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  box-sizing: border-box;
+
+  z-index: 20;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-button {
+  flex: 0 0 auto;
+
+  height: 42px;
+
+  padding: 0 22px;
+
+  border: 1px solid #ff4d2d;
+
+  border-radius: 25px;
+
+  background: #ffffff;
+
+  color: #ff4d2d;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.login-button:hover {
+  background: #ff4d2d;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ADMIN ICON
+========================================================= */
+
+.admin-icon {
+  color: #333333;
+}
+
+.admin-icon:hover {
+  color: #ff4d2d;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.logout-icon {
+  color: #d93025;
+}
+
+.logout-icon:hover {
+  color: #ffffff;
+
+  background: #d93025;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  flex: 0 0 44px;
+
+  width: 44px;
+  height: 44px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #222222;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+}
+
+.mobile-menu-button:hover {
+  color: #ff4d2d;
+
+  background: #fff3ef;
+}
+
+
+/* =========================================================
+   MOBILE OVERLAY
+========================================================= */
+
+.mobile-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  animation: overlayFade 0.2s ease;
+}
+
+@keyframes overlayFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   MOBILE SIDEBAR
+========================================================= */
+
+.mobile-sidebar {
+  width: 310px;
+  max-width: 85%;
+
+  height: 100%;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
+
+  animation: sidebarSlide 0.25s ease;
+}
+
+@keyframes sidebarSlide {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE HEADER
+========================================================= */
+
+.mobile-sidebar-header {
+  height: 82px;
+
+  padding: 0 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.mobile-sidebar-header img {
+  width: 125px;
+
+  display: block;
+}
+
+.mobile-sidebar-header button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: #fff3ef;
+
+  color: #ff4d2d;
+
+  border-radius: 50%;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-sidebar-menu {
+  flex: 1;
+
+  padding: 18px 15px;
+
+  overflow-y: auto;
+}
+
+.mobile-sidebar-menu button {
+  width: 100%;
+
+  min-height: 50px;
+
+  margin-bottom: 6px;
+
+  padding: 0 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #333333;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.mobile-sidebar-menu button:hover {
+  background: #fff3ef;
+
+  color: #ff4d2d;
+}
+
+.mobile-sidebar-menu button.active {
+  background: #fff0eb;
+
+  color: #ff4d2d;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   MOBILE COUNT
+========================================================= */
+
+.mobile-count {
+  min-width: 23px;
+  height: 23px;
+
+  padding: 0 6px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ff4d2d;
+
+  color: #ffffff;
+
+  border-radius: 50px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MOBILE BOTTOM
+========================================================= */
+
+.mobile-sidebar-bottom {
+  padding: 18px;
+
+  border-top: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   MOBILE LOGIN
+========================================================= */
+
+.mobile-login {
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #ff4d2d;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MOBILE LOGOUT
+========================================================= */
+
+.mobile-logout {
+  width: 100%;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #fff0ee;
+
+  color: #d93025;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1201px) {
+  .navbar-container {
+    width: 92%;
+  }
+
+  .navbar-menu {
+    gap: 38px;
+  }
+
+  .navbar-actions {
+    gap: 11px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+  .navbar-container {
+    width: 95%;
+
+    gap: 18px;
+  }
+
+  .navbar-logo {
+    width: 145px;
+  }
+
+  .navbar-menu {
+    gap: 22px;
+  }
+
+  .navbar-menu li {
+    font-size: 15px;
+  }
+
+  .navbar-actions {
+    gap: 5px;
+  }
+
+  .navbar-icon-button {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .navbar-icon-button svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .navbar-search {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .navbar-search.search-open {
+    width: 170px;
+
+    flex-basis: 170px;
+  }
+
+  .login-button {
+    height: 40px;
+
+    padding: 0 17px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+  .navbar {
+    height: 75px;
+  }
+
+  .navbar-container {
+    width: 94%;
+
+    gap: 15px;
+  }
+
+  .navbar-logo {
+    width: 135px;
+  }
+
+  .navbar-menu {
+    gap: 16px;
+  }
+
+  .navbar-menu li {
+    font-size: 14px;
+  }
+
+  .navbar-actions {
+    gap: 2px;
+  }
+
+  .navbar-icon-button {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+  }
+
+  .navbar-search {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+  }
+
+  .login-button {
+    padding: 0 13px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar-container {
+    width: 92%;
+
+    gap: 10px;
+  }
+
+  .navbar-logo {
+    width: 125px;
+  }
+
+  /* Hide desktop menu */
+
+  .navbar-menu {
+    display: none;
+  }
+
+  /* Mobile actions */
+
+  .navbar-actions {
+    margin-left: auto;
+
+    gap: 5px;
+  }
+
+  /* Hide desktop action icons */
+
+  .navbar-actions .navbar-search,
+  .navbar-actions > .navbar-icon-button,
+  .navbar-actions .login-button {
+    display: none;
+  }
+
+  /* Show hamburger */
+
+  .mobile-menu-button {
+    display: flex;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .navbar-logo {
+    width: 115px;
+  }
+
+  .mobile-menu-button {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  .mobile-sidebar {
+    width: 290px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.navbar button:focus-visible,
+.navbar li:focus-visible,
+.mobile-sidebar button:focus-visible {
+  outline: 2px solid #ff4d2d;
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   FINAL ALIGNMENT FIX
+========================================================= */
+
+.navbar-container > *,
+.navbar-actions > *,
+.navbar-menu > li {
+  flex-shrink: 0;
+}
+
+.navbar-actions {
+  min-width: max-content;
+}
+
+.navbar-menu {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.navbar-menu li {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PREVENT UNWANTED SVG / TEXT OVERFLOW
+========================================================= */
+
+.navbar-icon-button svg,
+.mobile-menu-button svg,
+.mobile-sidebar-header button svg,
+.mobile-logout svg {
+  pointer-events: none;
+  flex-shrink: 0;
+}

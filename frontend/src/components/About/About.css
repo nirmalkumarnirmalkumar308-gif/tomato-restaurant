@@ -1,0 +1,153 @@
+.about {
+    width: 100%;
+    padding: 90px 5%;
+    box-sizing: border-box;
+    background: white;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-visual {
+    min-height: 360px;
+    border-radius: 30px;
+    background: #fff2ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about-main-icon {
+    width: 210px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    font-size: 110px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.about-small-card {
+    position: absolute;
+    right: -20px;
+    bottom: 30px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.about-small-card strong {
+    color: tomato;
+    font-size: 22px;
+}
+
+.about-small-card span {
+    color: #666;
+    font-size: 11px;
+}
+
+.about-label {
+    color: tomato;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.about-content h2 {
+    margin: 10px 0 20px;
+    font-size: 45px;
+    line-height: 1.1;
+    color: #222;
+}
+
+.about-content h2 span {
+    color: tomato;
+}
+
+.about-content > p {
+    color: #686868;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.about-features {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.about-features div {
+    min-width: 110px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-radius: 14px;
+    background: #fafafa;
+}
+
+.about-features strong {
+    font-size: 22px;
+}
+
+.about-features span {
+    color: #444;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+@media (max-width: 800px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-features {
+        justify-content: center;
+    }
+
+    .about-small-card {
+        right: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .about {
+        padding: 65px 5%;
+    }
+
+    .about-content h2 {
+        font-size: 35px;
+    }
+
+    .about-visual {
+        min-height: 300px;
+    }
+
+    .about-main-icon {
+        width: 170px;
+        height: 170px;
+        font-size: 85px;
+    }
+
+    .about-features {
+        flex-wrap: wrap;
+    }
+}
